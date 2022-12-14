@@ -1,0 +1,16 @@
+{% extends "shared/base.html" %}
+
+{% block title %}
+<title>Job Board</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="display-4">Job List</h1>
+</div>
+    {% for i in jobs %}
+    <div>
+    <p>{{ i.title }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}
