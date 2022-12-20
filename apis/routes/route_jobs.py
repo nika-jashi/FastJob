@@ -15,7 +15,6 @@ templates = Jinja2Templates(directory="templates")
 router = APIRouter()
 
 
-@router.get("/create-job/", response_model=ShowJob)
 @router.post("/create-job/", response_model=ShowJob)
 def create_job(request: 'Request', job: JobCreate, db: Session = Depends(get_db),
                current_user: User = Depends(get_current_user_from_token)):
